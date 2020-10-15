@@ -1,0 +1,112 @@
+body {
+  /* here we use our main typeface and set it on our body */
+  font-family: 'Cardo', serif;
+  font-size: 18px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* using the same idea as tachyons using classes that apply specific styles to our elements */
+.archivo,
+.text-block h3,
+.text-block blockquote h4 {
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: normal;
+}
+
+.text-block blockquote h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+}
+
+.text-block blockquote p {
+  font-size: 36px;
+  line-height: 1.25;
+}
+
+.archivo-regular {
+  font-family: 'Archivo', sans-serif;
+}
+
+.cardo {
+  font-family: 'Cardo', serif;
+}
+
+.tenor,
+.text-block blockquote p {
+  font-family: 'Tenor Sans', sans-serif;
+}
+
+.hero-heading {
+  letter-spacing: 0.05em;
+}
+
+.hero-content {
+  max-width: 750px;
+}
+
+.text-block h3 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.line {
+  display: block;
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background-color: #1C1C1C;
+}
+
+/* here we overwrite the inline size styles on our image so that it scales nicely with the page */
+.gallery-image img {
+  width: auto !important;
+  height: auto !important;
+}
+
+.caption {
+  max-width: 870px;
+}
+
+.container {
+  max-width: 1300px;
+}
+
+.explore-title {
+  margin-bottom: 48px;
+  max-width: 320px;
+}
+
+.description {
+  max-width: 860px;
+}
+
+.footer-content {
+  background-color: #1C1C1C;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.gallery .gallery-image:first-of-type {
+  margin-top: 0;
+}
+
+.gallery .gallery-image:last-of-type {
+  margin-bottom: 0;
+}
+
+blockquote {
+  margin: 0;
+}
+
+blockquote p {
+  margin-top: 0;
+  margin-bottom: 48px;
+}

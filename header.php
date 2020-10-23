@@ -54,4 +54,6 @@
       </nav><!-- #site-navigation -->
     </header><!-- #masthead -->
 
+		<?php get_template_part('template-parts/content-menu'); ?>
+
 		<div id="content" class="site-content">

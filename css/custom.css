@@ -9,7 +9,8 @@ body {
 /* using the same idea as tachyons using classes that apply specific styles to our elements */
 .archivo,
 .text-block h3,
-.text-block blockquote h4 {
+.text-block blockquote h4,
+.text-block blockquote p strong {
   font-family: 'Archivo Black', sans-serif;
   font-weight: normal;
 }
@@ -109,4 +110,77 @@ blockquote {
 blockquote p {
   margin-top: 0;
   margin-bottom: 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 32px;
+}
+
+.navigation-link:nth-child(2),
+.navigation-link:nth-child(3) {
+  grid-column: span 2;
+}
+
+.navigation-link:first-child .aspect-ratio,
+.navigation-link:last-child .aspect-ratio {
+  padding-bottom: 100%;
+}
+
+.navigation-link:nth-child(2) .aspect-ratio,
+.navigation-link:nth-child(3) .aspect-ratio {
+  height: 100%;
+}
+
+/* Places styles */
+header {
+  z-index: 10000;
+}
+
+.menu-toggle {
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.active.menu-toggle {
+  background-image: url('../images/close-icon.svg');
+  /* text-indent: -999rem; */
+}
+
+.menu nav {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.menu-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  background-size: cover;
+}
+
+.overlay-open.menu-overlay {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.faded-overlay {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 }
